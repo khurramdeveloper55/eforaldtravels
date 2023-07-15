@@ -6,12 +6,12 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', 'sans serif';
+  font-family: "Poppins", "sans serif";
 }
 
 * {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 button {
@@ -31,29 +31,8 @@ button {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-#loader {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100vh;
-  z-index: 9999;
-}
-
-#loader::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #fff url("../img/loading.gif") no-repeat center;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .header {
@@ -67,8 +46,8 @@ button {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
 }
 
 .header .fix-bar .stick-navbar {
@@ -107,8 +86,8 @@ button {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
   list-style-type: none;
   margin-top: -10px;
   margin-bottom: 0;
@@ -125,7 +104,7 @@ button {
   text-decoration: none;
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
-  font-family: 'Poppins' 'sans serif';
+  font-family: "Poppins" "sans serif";
 }
 
 .header-navbar .topnav-bar__link:hover {
@@ -171,7 +150,7 @@ button {
   padding-top: 5rem;
   color: #fff;
   font-weight: 700;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   margin-bottom: 2.5rem;
   line-height: 6.8rem;
 }
@@ -211,7 +190,7 @@ button {
   line-height: 50px;
   position: relative;
   top: -3.3rem;
-  font-family: 'Poppins' sans-serif;
+  font-family: "Poppins" sans-serif;
 }
 
 .banner-info__section {
@@ -230,7 +209,7 @@ button {
   height: 35px;
   color: #666666;
   font-size: 1.1rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .banner-info__section select {
@@ -247,27 +226,30 @@ button {
   height: 20px;
 }
 
-.banner-info__first, .banner-info__second, .banner-info__third, .banner-info__button {
+.banner-info__first,
+.banner-info__second,
+.banner-info__third,
+.banner-info__button {
   width: 220px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .banner-info__button {
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .banner-info__button button {
@@ -297,8 +279,9 @@ button {
   position: relative;
 }
 
-.travel-agency__heading::before, .travel-agency__heading::after {
-  content: '';
+.travel-agency__heading::before,
+.travel-agency__heading::after {
+  content: "";
   width: 14%;
   border: 1px solid #13aba6;
   position: absolute;
@@ -357,8 +340,9 @@ button {
   word-spacing: 25px;
 }
 
-.travel-offers__heading::before, .travel-offers__heading::after {
-  content: '';
+.travel-offers__heading::before,
+.travel-offers__heading::after {
+  content: "";
   width: 14%;
   border: 1px solid #13aba6;
   position: absolute;
@@ -413,8 +397,9 @@ button {
   word-spacing: 25px;
 }
 
-.weekend-section__heading::before, .weekend-section__heading::after {
-  content: '';
+.weekend-section__heading::before,
+.weekend-section__heading::after {
+  content: "";
   width: 14%;
   border: 1px solid #13aba6;
   position: absolute;
@@ -454,8 +439,9 @@ button {
   text-transform: uppercase;
 }
 
-.carousel-header__heading::before, .carousel-header__heading::after {
-  content: '';
+.carousel-header__heading::before,
+.carousel-header__heading::after {
+  content: "";
   width: 14%;
   border: 1px solid #13aba6;
   position: absolute;
@@ -561,8 +547,9 @@ section h1 {
   position: relative;
 }
 
-section h1::before, section h1::after {
-  content: '';
+section h1::before,
+section h1::after {
+  content: "";
   width: 14%;
   border: 1px solid #13aba6;
   position: absolute;
@@ -613,8 +600,8 @@ section p {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .blog-post .tour-blog__coments h3 {
@@ -622,7 +609,7 @@ section p {
   font-weight: 300;
   font-size: 1.1rem;
   margin-top: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .blog-post .tour-blog__coments span {
@@ -631,7 +618,7 @@ section p {
 }
 
 .blog-post .tour-blog__body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .blog-post .tour-blog__heading {
@@ -667,7 +654,8 @@ section p {
   margin-bottom: 5px;
 }
 
-.footer-info__contacts, .footer-info__lnks {
+.footer-info__contacts,
+.footer-info__lnks {
   width: 25%;
 }
 
@@ -718,7 +706,7 @@ section p {
   width: 100%;
   height: 60px;
   padding-left: 10px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .footer-info button {
@@ -776,7 +764,8 @@ footer p {
   .travel-agency__heading {
     font-size: 2.3rem;
   }
-  .travel-agency__heading::before, .travel-agency__heading::after {
+  .travel-agency__heading::before,
+  .travel-agency__heading::after {
     top: 23px;
   }
   .travel-agency__heading::before {
@@ -794,7 +783,8 @@ footer p {
   .travel-offers__heading {
     font-size: 2.3rem;
   }
-  .travel-offers__heading::before, .travel-offers__heading::after {
+  .travel-offers__heading::before,
+  .travel-offers__heading::after {
     top: 23px;
   }
   .travel-offers__heading::before {
@@ -802,7 +792,7 @@ footer p {
   }
   .travel-offers .offers-box {
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
   }
   .travel-offers .offers {
     width: 46%;
@@ -823,7 +813,8 @@ footer p {
   .weekend-section__heading {
     font-size: 2.3rem;
   }
-  .weekend-section__heading::before, .weekend-section__heading::after {
+  .weekend-section__heading::before,
+  .weekend-section__heading::after {
     top: 23px;
   }
   .weekend-section__heading::before {
@@ -835,7 +826,8 @@ footer p {
   .carousel-header__heading {
     font-size: 2.3rem;
   }
-  .carousel-header__heading::before, .carousel-header__heading::after {
+  .carousel-header__heading::before,
+  .carousel-header__heading::after {
     top: 23px;
   }
   .carousel-header__heading::before {
@@ -854,7 +846,8 @@ footer p {
   section h1 {
     font-size: 2.3rem;
   }
-  section h1::before, section h1::after {
+  section h1::before,
+  section h1::after {
     top: 23px;
   }
   .tour-section {
@@ -919,7 +912,10 @@ footer p {
   .banner-info__section {
     margin: 0;
   }
-  .banner-info__first, .banner-info__second, .banner-info__third, .banner-info__button {
+  .banner-info__first,
+  .banner-info__second,
+  .banner-info__third,
+  .banner-info__button {
     width: 200px;
     margin-right: 10px;
     margin-left: 10px;
@@ -932,8 +928,8 @@ footer p {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
   }
   .header-navbar .topnav-bar__logo {
     margin: 0;
@@ -953,7 +949,8 @@ footer p {
     font-size: 1.8rem;
     word-spacing: 4px;
   }
-  .travel-agency__heading::before, .travel-agency__heading::after {
+  .travel-agency__heading::before,
+  .travel-agency__heading::after {
     display: none;
   }
   .travel-box__para {
@@ -966,7 +963,8 @@ footer p {
     font-size: 1.8rem;
     word-spacing: 4px;
   }
-  .travel-offers__heading::before, .travel-offers__heading::after {
+  .travel-offers__heading::before,
+  .travel-offers__heading::after {
     display: none;
   }
   .travel-offers .offers {
@@ -986,7 +984,8 @@ footer p {
     font-size: 1.8rem;
     word-spacing: 4px;
   }
-  .carousel-header__heading::before, .carousel-header__heading::after {
+  .carousel-header__heading::before,
+  .carousel-header__heading::after {
     display: none;
   }
   .carousel-header__para {
@@ -999,7 +998,8 @@ footer p {
     font-size: 1.8rem;
     word-spacing: 4px;
   }
-  .weekend-section__heading::before, .weekend-section__heading::after {
+  .weekend-section__heading::before,
+  .weekend-section__heading::after {
     display: none;
   }
   .tour-section {
@@ -1018,7 +1018,8 @@ footer p {
     font-size: 1.8rem;
     word-spacing: 4px;
   }
-  section h1::before, section h1::after {
+  section h1::before,
+  section h1::after {
     display: none;
   }
   section p {
@@ -1026,10 +1027,10 @@ footer p {
   }
   .blog-post {
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
   .blog-post .tour-blog {
     width: 90%;
@@ -1070,9 +1071,10 @@ footer p {
   .footer-info {
     max-width: 600px;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
   }
-  .footer-info__contacts, .footer-info__lnks {
+  .footer-info__contacts,
+  .footer-info__lnks {
     width: 250px;
   }
   .footer-info__sbmit {
@@ -1118,8 +1120,8 @@ footer p {
     position: relative;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
   .header-navbar .topnav-bar__logo {
     margin: 0;
@@ -1136,14 +1138,14 @@ footer p {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     z-index: 9999;
     padding: 20px;
     padding-bottom: 40px;
     display: none;
     -webkit-transform: translate(2.6%);
-            transform: translate(2.6%);
+    transform: translate(2.6%);
   }
   .header-navbar .topnav-bar__item {
     text-align: left;
@@ -1213,7 +1215,8 @@ footer p {
   .footer-icons {
     margin-left: 15px;
   }
-  .footer-info__contacts, .footer-info__lnks {
+  .footer-info__contacts,
+  .footer-info__lnks {
     width: 100%;
     margin-left: 15px;
   }
@@ -1236,7 +1239,7 @@ footer p {
     position: absolute;
     left: 50%;
     -webkit-transform: translate(-50%);
-            transform: translate(-50%);
+    transform: translate(-50%);
   }
   footer p {
     margin-top: 60px;
@@ -1258,8 +1261,8 @@ footer p {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
   .tour-section__buttons button {
     margin: 0;

@@ -1,1536 +1,1460 @@
 // Common CSS
 
-html{
-    font-size: 15px;
-    scroll-behavior: smooth;
+html {
+  font-size: 15px;
+  scroll-behavior: smooth;
 }
 
-body{
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', 'sans serif';
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", "sans serif";
 }
 
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
 // Variables
 
 // Colors Var
-$primarycolor:#ee580f;
-$secondarycolor:#022739;
-$darkblue:#0a4668;
-$lightblue:#007bff;
-$paracolor:#6c757d;
-$bordercolor:#13aba6;
-$headingcolor:#0adef8;
-$whitecolor:#fff;
-$blackcolor:#000;
-$graycolor:#666666;
-
+$primarycolor: #ee580f;
+$secondarycolor: #022739;
+$darkblue: #0a4668;
+$lightblue: #007bff;
+$paracolor: #6c757d;
+$bordercolor: #13aba6;
+$headingcolor: #0adef8;
+$whitecolor: #fff;
+$blackcolor: #000;
+$graycolor: #666666;
 
 // Flex Mixins
 
 @mixin flex {
-    display: flex;
+  display: flex;
 }
 
 @mixin flex-center {
-    @include flex();
-    justify-content: center;
+  @include flex();
+  justify-content: center;
 }
 
 @mixin flex-between {
-    @include flex();
-    justify-content: space-between;
+  @include flex();
+  justify-content: space-between;
 }
 
 @mixin flex-align-center {
-    @include flex();
-    justify-content: space-between;
-    align-items: center;
+  @include flex();
+  justify-content: space-between;
+  align-items: center;
 }
-
 
 // Button
 
-button{
-    width: 190px;
-    height: 60px;
-    background-color: $primarycolor;
-    color: $whitecolor;
-    font-size: 0.9rem;
-    border: none;
-    border-radius: 40px;
-    transition: all 500ms ease;
+button {
+  width: 190px;
+  height: 60px;
+  background-color: $primarycolor;
+  color: $whitecolor;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 40px;
+  transition: all 500ms ease;
 }
 
-.flex-box{
-    @include flex-between();
+.flex-box {
+  @include flex-between();
 }
-
-
-// Pre Loader
-
-#loader{
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100vh;
-    z-index: 9999;
-}
-
-#loader::after{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: #fff url("../img/loading.gif") no-repeat center;
-}
-
 
 // Header Starts
 
-.header{
-    width: 100%;
-    background-image: url("../img/header-bg.jpg");
-    background-size: cover;
+.header {
+  width: 100%;
+  background-image: url("../img/header-bg.jpg");
+  background-size: cover;
 
-    .fix-bar{
-        @include flex();
-        justify-content: flex-end;
+  .fix-bar {
+    @include flex();
+    justify-content: flex-end;
 
-        .stick-navbar{
-            @include flex();
-            list-style-type: none;
-            background-color: $whitecolor;
-            margin: 0;
-            margin-bottom: 8px;
-            padding: 10px 0px;
-            padding-right: 12rem;
+    .stick-navbar {
+      @include flex();
+      list-style-type: none;
+      background-color: $whitecolor;
+      margin: 0;
+      margin-bottom: 8px;
+      padding: 10px 0px;
+      padding-right: 12rem;
 
-            &__item{
+      &__item {
+        padding-right: 2.8rem;
+      }
 
-                padding-right: 2.8rem;
-
-            }
-            
-            &__link{
-                text-decoration: none;
-                font-size: 1.1rem;
-                color: $graycolor;
-            }
-        }
+      &__link {
+        text-decoration: none;
+        font-size: 1.1rem;
+        color: $graycolor;
+      }
     }
-
+  }
 }
 
-.header-navbar{
-    max-width: 1200px;
-    margin: 0 auto;
+.header-navbar {
+  max-width: 1200px;
+  margin: 0 auto;
 
-    .topnav-bar{
-        &__logo{
-            margin-top: -1.2rem;
-        }
-
-        &__list{
-            @include flex();
-            justify-content: flex-end;
-            list-style-type: none;
-            margin-top: -10px;
-            margin-bottom: 0;
-        }
-
-        &__item{
-            padding-right: 3.8rem;
-            padding-bottom: 1.2rem;
-        }
-
-        &__link{
-            color: $whitecolor;
-            font-size: 1.1rem;
-            text-decoration: none;
-            transition: all 500ms ease;
-            font-family: 'Poppins' 'sans serif';
-
-            &:hover{
-                color: $blackcolor;
-                transition: all 500ms ease;
-            }
-        }
-
-        button{
-            position: relative;
-            width: 50px;
-            height: 45px;
-            background-color: transparent;
-            display: none;
-
-            .icon-bar{
-                border: 2px solid $whitecolor;
-                margin: 5px;
-                border-radius: 2px;
-            }
-
-            &:hover{
-                cursor: pointer;
-            }
-
-        }
+  .topnav-bar {
+    &__logo {
+      margin-top: -1.2rem;
     }
-}
 
+    &__list {
+      @include flex();
+      justify-content: flex-end;
+      list-style-type: none;
+      margin-top: -10px;
+      margin-bottom: 0;
+    }
+
+    &__item {
+      padding-right: 3.8rem;
+      padding-bottom: 1.2rem;
+    }
+
+    &__link {
+      color: $whitecolor;
+      font-size: 1.1rem;
+      text-decoration: none;
+      transition: all 500ms ease;
+      font-family: "Poppins" "sans serif";
+
+      &:hover {
+        color: $blackcolor;
+        transition: all 500ms ease;
+      }
+    }
+
+    button {
+      position: relative;
+      width: 50px;
+      height: 45px;
+      background-color: transparent;
+      display: none;
+
+      .icon-bar {
+        border: 2px solid $whitecolor;
+        margin: 5px;
+        border-radius: 2px;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
 
 // Header Ends
 
-
 // Banner Starts
 
-.banner-wrapper{
-    width: 100%;
-    background-image: url(../img/banner.jpg);
-    background-size: cover;
+.banner-wrapper {
+  width: 100%;
+  background-image: url(../img/banner.jpg);
+  background-size: cover;
 }
 
-.banner-inner{
-    width: 100%;
-    text-align: center;
-    position: relative;
-    top: 12%;
+.banner-inner {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  top: 12%;
 
-    &__heading{
-        font-size: 6rem;
-        margin-top: 0;
-        padding-top: 5rem;
-        color: $whitecolor;
-        font-weight: 700;
-        font-family: 'Poppins', sans-serif;
-        margin-bottom:2.5rem ;
-        line-height: 6.8rem;
+  &__heading {
+    font-size: 6rem;
+    margin-top: 0;
+    padding-top: 5rem;
+    color: $whitecolor;
+    font-weight: 700;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 2.5rem;
+    line-height: 6.8rem;
 
-        span{
-            color: $headingcolor;
-        }
+    span {
+      color: $headingcolor;
     }
+  }
 
-    &__button{
+  &__button {
+    margin-bottom: 4.5rem;
 
-        margin-bottom: 4.5rem;
-
-        &:hover{
-            background-color: $blackcolor;
-            transition: all 500 ms ease;
-            cursor: pointer;
-        }
+    &:hover {
+      background-color: $blackcolor;
+      transition: all 500 ms ease;
+      cursor: pointer;
     }
+  }
 }
 
 // Banner Info-Tag
 
-.banner-info{
-    background-color: rgba(255, 255, 255, 0.801);
+.banner-info {
+  background-color: rgba(255, 255, 255, 0.801);
+  position: relative;
+  top: 26%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  &__tag {
+    background-color: $whitecolor;
+    width: 190px;
+    height: 50px;
+    color: $darkblue;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 50px;
     position: relative;
-    top: 26%;
-    max-width: 1200px;
-    margin: 0 auto;
+    top: -3.3rem;
+    font-family: "Poppins" sans-serif;
+  }
 
-    &__tag{
-        background-color: $whitecolor;
-        width: 190px;
-        height: 50px;
-        color: $darkblue;
-        font-size: 1.2rem;
-        letter-spacing: 1px;
-        font-weight: 600;
-        text-align: center;
-        line-height: 50px;
-        position: relative;
-        top: -3.3rem;
-        font-family: 'Poppins' sans-serif;
+  &__section {
+    margin: 0px 50px;
+    height: 220px;
+    padding-bottom: 30px;
+
+    label {
+      color: $graycolor;
     }
 
-    &__section{
-        margin: 0px 50px;
-        height: 220px;
-        padding-bottom: 30px;
-
-        label{
-            color: $graycolor;
-        }
-
-        input{
-            display: block;
-            width: 100%;
-            height: 35px;
-            color: $graycolor;
-            font-size: 1.1rem;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        select{
-            display: block;
-            width: 100%;
-            height: 35px;
-            margin-bottom: 10px;
-            color: $graycolor;
-            font-size: 1.1rem;
-
-            option{
-                color: $graycolor;
-                height: 20px;
-            }
-        }
+    input {
+      display: block;
+      width: 100%;
+      height: 35px;
+      color: $graycolor;
+      font-size: 1.1rem;
+      font-family: "Poppins", sans-serif;
     }
 
-    &__first, &__second, &__third, &__button{
-        width: 220px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+    select {
+      display: block;
+      width: 100%;
+      height: 35px;
+      margin-bottom: 10px;
+      color: $graycolor;
+      font-size: 1.1rem;
+
+      option {
+        color: $graycolor;
+        height: 20px;
+      }
     }
+  }
 
-    &__button{
-        align-items: center;
-        justify-content: center;
+  &__first,
+  &__second,
+  &__third,
+  &__button {
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 
-        button{
-            width: 170px;
-            border-radius: 0px;
-            height: 50px;
+  &__button {
+    align-items: center;
+    justify-content: center;
 
-            &:hover{
-                background-color: $lightblue;
-                cursor: pointer;
-            }
-        }
+    button {
+      width: 170px;
+      border-radius: 0px;
+      height: 50px;
+
+      &:hover {
+        background-color: $lightblue;
+        cursor: pointer;
+      }
     }
+  }
 }
 
 // Banner Ends
 
 // Travel Agency Section Starts
 
-.travel-agency{
+.travel-agency {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 70px;
+  text-align: center;
+  margin-bottom: 40px;
+
+  &__heading {
+    font-size: 2.7rem;
+    font-weight: 900;
+    word-spacing: 25px;
     position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
-    margin-top: 70px;
-    text-align: center;
-    margin-bottom: 40px;
 
-    &__heading{
-        font-size: 2.7rem;
-        font-weight: 900;
-        word-spacing: 25px;
-        position: relative;
-
-        &::before, &::after{
-            content: '';
-            width: 14%;
-            border: 1px solid $bordercolor;
-            position: absolute;
-            top: 30px;
-        }
-
-        &::before{
-            left: 95px;
-        }
-
+    &::before,
+    &::after {
+      content: "";
+      width: 14%;
+      border: 1px solid $bordercolor;
+      position: absolute;
+      top: 30px;
     }
 
-    &__para{
-        font-size: 1.1rem;
-        line-height: 20px;
+    &::before {
+      left: 95px;
     }
+  }
 
-    button{
-        margin-top: 40px;
-    }
+  &__para {
+    font-size: 1.1rem;
+    line-height: 20px;
+  }
+
+  button {
+    margin-top: 40px;
+  }
 }
 
-.travel-box{
-    position: relative;
-    width: 90%;
-    margin: 0 auto;
-    border: 20px solid;
-    border-image-source: linear-gradient(102deg, rgba(12, 26, 63, 1) 0%, rgba(11, 97, 130, 1) 100%);
-    border-image-slice: 1;
-    margin-top: 60px;
+.travel-box {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  border: 20px solid;
+  border-image-source: linear-gradient(
+    102deg,
+    rgba(12, 26, 63, 1) 0%,
+    rgba(11, 97, 130, 1) 100%
+  );
+  border-image-slice: 1;
+  margin-top: 60px;
 
-    img{
-        width: 55%;
-        position: absolute;
-        top: -60px;
-        right: -80px;
-    }
+  img {
+    width: 55%;
+    position: absolute;
+    top: -60px;
+    right: -80px;
+  }
 
-    &__para{
-        text-align: left;
-        font-size: 1.1rem;
-        padding-left: 10px;
-        padding-right: 29rem;
-        line-height: 30px;
-    }
+  &__para {
+    text-align: left;
+    font-size: 1.1rem;
+    padding-left: 10px;
+    padding-right: 29rem;
+    line-height: 30px;
+  }
 }
 
 // Travel Agency Section Ends
 
 // Travel Offers Section Starts
 
-.travel-offers{
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
+.travel-offers {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 60px;
+
+  &__heading {
+    font-size: 2.7rem;
+    position: relative;
+    font-weight: 900;
+    word-spacing: 25px;
+
+    &::before,
+    &::after {
+      content: "";
+      width: 14%;
+      border: 1px solid $bordercolor;
+      position: absolute;
+      top: 30px;
+    }
+
+    &::before {
+      left: 70px;
+    }
+  }
+
+  &__para {
+    font-size: 1.1rem;
     margin-bottom: 60px;
+  }
 
-    &__heading{
-        font-size: 2.7rem;
-        position: relative;
-        font-weight: 900;
-        word-spacing: 25px;
+  .offers {
+    width: 24%;
 
-        &::before, &::after{
-            content: '';
-            width: 14%;
-            border: 1px solid $bordercolor;
-            position: absolute;
-            top: 30px;
-        }
-
-        &::before{
-            left: 70px;
-        }
-
+    &__icon {
+      width: 50%;
     }
 
-    &__para{
-        font-size: 1.1rem;
-        margin-bottom: 60px;
+    &__heading {
+      font-size: 1.8rem;
+      font-weight: 400;
+      margin-bottom: 0px;
     }
 
-    .offers{
-        width: 24%;
-
-        &__icon{
-            width: 50%;
-        }
-
-        &__heading{
-            font-size: 1.8rem;
-            font-weight: 400;
-            margin-bottom: 0px;
-        }
-
-        &__para{
-            font-size: 1.2rem;
-            line-height: 25px;
-        }
-
-        button{
-            width: 160px;
-            height: 50px;
-            margin-top: 25px;
-            text-transform: uppercase;
-        }
-
+    &__para {
+      font-size: 1.2rem;
+      line-height: 25px;
     }
+
+    button {
+      width: 160px;
+      height: 50px;
+      margin-top: 25px;
+      text-transform: uppercase;
+    }
+  }
 }
 
 // Travel Offers Section Ends
 
 // Weekend Section Starts
 
-.weekend-section{
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
+.weekend-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
 
-    &__heading{
-        font-size: 2.7rem;
-        position: relative;
-        font-weight: 900;
-        word-spacing: 25px;
-
-        &::before, &::after{
-            content: '';
-            width: 14%;
-            border: 1px solid $bordercolor;
-            position: absolute;
-            top: 30px;
-        }
-
-        &::before{
-            left: 50px;
-        }
-    }
-
-    &__para{
-        font-size: 1.1rem;
-    }
-}
-
-.weekend-image{
-    width: 100%;
-    height: 250px;
-    background-image: url("../img/London.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-
-.carousel-header{
-
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
+  &__heading {
+    font-size: 2.7rem;
     position: relative;
+    font-weight: 900;
+    word-spacing: 25px;
 
-    &__heading{
-
-        margin-top: 40px;
-        font-size: 2.7rem;
-        position: relative;
-        font-weight: 900;
-        word-spacing: 25px;
-        text-transform: uppercase;
-
-        &::before, &::after{
-            content: '';
-            width: 14%;
-            border: 1px solid $bordercolor;
-            position: absolute;
-            top: 30px;
-        }
-
-        &::before{
-            left: 260px;
-        }
-    }
-    
-    &__para{
-        font-size: 1.1rem;
-        margin-bottom: 45px;
+    &::before,
+    &::after {
+      content: "";
+      width: 14%;
+      border: 1px solid $bordercolor;
+      position: absolute;
+      top: 30px;
     }
 
-    .caption{
-
-        h4{
-            font-size: 1.5rem;
-            font-weight: 400;
-            text-align: left;
-            margin-top: 20px;
-        }
-
-        p{
-            font-size: 1.1rem;
-            text-align: left;
-        }
+    &::before {
+      left: 50px;
     }
+  }
 
-    .owl-theme .owl-dots{
-        text-align: left;
-    }
-
-    .owl-theme .owl-dots .owl-dot{
-
-        width: 30px;
-        text-align: left;
-        margin-right: 20px;
-        margin-bottom: 0;
-
-        span{
-
-            width: 30px;
-            height: 30px;
-            background-color: $lightblue;
-        }
-    }
-
-    .owl-theme .owl-dots .owl-dot.active span{
-        background-color: $blackcolor;
-    }
+  &__para {
+    font-size: 1.1rem;
+  }
 }
 
+.weekend-image {
+  width: 100%;
+  height: 250px;
+  background-image: url("../img/London.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.carousel-header {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+
+  &__heading {
+    margin-top: 40px;
+    font-size: 2.7rem;
+    position: relative;
+    font-weight: 900;
+    word-spacing: 25px;
+    text-transform: uppercase;
+
+    &::before,
+    &::after {
+      content: "";
+      width: 14%;
+      border: 1px solid $bordercolor;
+      position: absolute;
+      top: 30px;
+    }
+
+    &::before {
+      left: 260px;
+    }
+  }
+
+  &__para {
+    font-size: 1.1rem;
+    margin-bottom: 45px;
+  }
+
+  .caption {
+    h4 {
+      font-size: 1.5rem;
+      font-weight: 400;
+      text-align: left;
+      margin-top: 20px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      text-align: left;
+    }
+  }
+
+  .owl-theme .owl-dots {
+    text-align: left;
+  }
+
+  .owl-theme .owl-dots .owl-dot {
+    width: 30px;
+    text-align: left;
+    margin-right: 20px;
+    margin-bottom: 0;
+
+    span {
+      width: 30px;
+      height: 30px;
+      background-color: $lightblue;
+    }
+  }
+
+  .owl-theme .owl-dots .owl-dot.active span {
+    background-color: $blackcolor;
+  }
+}
 
 // Weekend Section Ends
 
-
 // Tour Section Starts
 
-.tour-wrapper{
-    width: 100%;
-    background-image: url("../img/Amazing.jpg");
-    background-size: cover;
-    background-attachment: fixed;
+.tour-wrapper {
+  width: 100%;
+  background-image: url("../img/Amazing.jpg");
+  background-size: cover;
+  background-attachment: fixed;
 }
 
-.tour-section{
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-    color: $whitecolor;
-    padding-top: 60px;
+.tour-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  color: $whitecolor;
+  padding-top: 60px;
 
-    &__heading{
-        font-size: 2.7rem;
-        font-weight: 900;
-        word-spacing: 25px;
+  &__heading {
+    font-size: 2.7rem;
+    font-weight: 900;
+    word-spacing: 25px;
+  }
+
+  &__para {
+    font-size: 1.1rem;
+    padding-bottom: 40px;
+  }
+
+  &__buttons {
+    button {
+      margin-right: 20px;
+      width: 140px;
+      height: 48px;
+      margin-bottom: 60px;
+      transition: all 500ms ease;
+
+      &:hover {
+        background-color: $lightblue;
+        transition: all 500ms ease;
+        cursor: pointer;
+      }
     }
-
-    &__para{
-        font-size: 1.1rem;
-        padding-bottom: 40px;
-    }
-
-    &__buttons{
-
-        button{
-            margin-right: 20px;
-            width: 140px;
-            height: 48px;
-            margin-bottom: 60px;
-            transition: all 500ms ease;
-
-            &:hover{
-                background-color: $lightblue;
-                transition: all 500ms ease;
-                cursor: pointer;
-            }
-        }
-    }
+  }
 }
 
 // Tour Section Ends
 
-
 // Blog Section Starts
 
+section {
+  width: 100%;
+  position: relative;
 
-section{
-    width: 100%;
+  h1 {
+    text-align: center;
+    font-size: 2.7rem;
+    word-spacing: 25px;
+    font-weight: 900;
+    margin-top: 60px;
+    margin-bottom: 0;
     position: relative;
 
-    h1{
-        text-align: center;
-        font-size: 2.7rem;
-        word-spacing: 25px;
-        font-weight: 900;
-        margin-top: 60px;
-        margin-bottom: 0;
-        position: relative;
-        
-        &::before, &::after{
-            content: '';
-            width: 14%;
-            border: 1px solid $bordercolor;
-            position: absolute;
-            top: 30px;
-        }
-
-        &::before{
-            left: 27%;
-        }
-
+    &::before,
+    &::after {
+      content: "";
+      width: 14%;
+      border: 1px solid $bordercolor;
+      position: absolute;
+      top: 30px;
     }
 
-    p{
-        text-align: center;
-        font-size: 1.1rem;
-        margin-bottom: 3rem;
+    &::before {
+      left: 27%;
     }
+  }
+
+  p {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+  }
 }
 
-.blog-post{
-    max-width: 1200px;
-    margin: 0 auto;
+.blog-post {
+  max-width: 1200px;
+  margin: 0 auto;
 
-    .tour-blog{
-        width: 49%;
+  .tour-blog {
+    width: 49%;
 
-        &__img{
-            position: relative;
+    &__img {
+      position: relative;
 
-            img{
-                width: 100%;
-            }
-        }
-        &__tag{
-            position: absolute;
-            top: 0;
-            background-color: $secondarycolor;
-            width: 110px;
-            height: 40px;
-            color: $whitecolor;
-            text-align: center;
-            line-height: 35px;
-            font-size: 1.2rem;
-        }
-
-        &__coments{
-            display: flex;
-            justify-content: space-between;
-        
-        
-            h3{
-                color: $lightblue;
-                font-weight: 300;
-                font-size: 1.1rem;
-                margin-top: 0;
-                font-family: 'Poppins', sans-serif;
-            }
-
-            span{
-                text-align: right;
-                color: $lightblue;
-            }
-        }
-
-        &__body{
-            font-family: 'Poppins', sans-serif;
-        }
-
-        &__heading{
-            margin-top: 0;
-            font-weight: 300;
-            font-size: 1.4rem;
-        }
-
-        &__para{
-            text-align: left;
-            font-size: 1rem;
-            color: $paracolor;
-            line-height: 30px;
-        }
+      img {
+        width: 100%;
+      }
     }
+    &__tag {
+      position: absolute;
+      top: 0;
+      background-color: $secondarycolor;
+      width: 110px;
+      height: 40px;
+      color: $whitecolor;
+      text-align: center;
+      line-height: 35px;
+      font-size: 1.2rem;
+    }
+
+    &__coments {
+      display: flex;
+      justify-content: space-between;
+
+      h3 {
+        color: $lightblue;
+        font-weight: 300;
+        font-size: 1.1rem;
+        margin-top: 0;
+        font-family: "Poppins", sans-serif;
+      }
+
+      span {
+        text-align: right;
+        color: $lightblue;
+      }
+    }
+
+    &__body {
+      font-family: "Poppins", sans-serif;
+    }
+
+    &__heading {
+      margin-top: 0;
+      font-weight: 300;
+      font-size: 1.4rem;
+    }
+
+    &__para {
+      text-align: left;
+      font-size: 1rem;
+      color: $paracolor;
+      line-height: 30px;
+    }
+  }
 }
 
 // Blog Section Ends
 
-
 // Footers Starts
 
-.footer-icons{
-    max-width: 1200px;
-    margin: 0 auto;
+.footer-icons {
+  max-width: 1200px;
+  margin: 0 auto;
 
-    a{
-        padding-right: 15px;
-    }
+  a {
+    padding-right: 15px;
+  }
 }
 
-.footer-info{
-    max-width: 1200px;
-    margin: 0 auto;
-    margin-top: 10px;
+.footer-info {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 10px;
 
-    &__heading{
-        font-size: 1.8rem;
-        margin-bottom: 5px;
-    }
+  &__heading {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+  }
 
-    &__contacts, &__lnks{
-        width: 25%;
-    }
+  &__contacts,
+  &__lnks {
+    width: 25%;
+  }
 
-    &__sbmit{
-        width: 45%;
-    }
+  &__sbmit {
+    width: 45%;
+  }
 
-    &__para{
-        font-size: 1.2rem;
-        margin-top: 0;
-        text-align: left;
-    }
+  &__para {
+    font-size: 1.2rem;
+    margin-top: 0;
+    text-align: left;
+  }
 
-    &__list{
-        margin-left: -40px;
-        margin-top: 0;
-    }
+  &__list {
+    margin-left: -40px;
+    margin-top: 0;
+  }
 
-    &__item{
-        list-style-type: none;
-    }
+  &__item {
+    list-style-type: none;
+  }
 
-    &__link{
-        text-decoration: none;
-        font-size: 1.2rem;
-        color: $whitecolor;
-        transition: all 500ms ease;
-
-        &:hover{
-            color: $graycolor;
-            transition: all 500ms ease;
-        }
-    }
-    input{
-        width: 48%;
-        padding: 10px;
-        margin-bottom: 10px;
-    }
-
-    .eml-rt{
-        float: right;
-    }
-
-    textarea{
-        width: 100%;
-        height: 60px;
-        padding-left: 10px;
-        font-family: 'Poppins', sans-serif;
-    }
-
-    button{
-        float: right;
-        width: 110px;
-        height: 40px;
-        border-radius: 0;
-        background-color: $blackcolor;
-        color: $whitecolor;
-        font-size: 1rem;
-        transition: all 500ms ease;
-
-        &:hover{
-            background-color: $lightblue;
-            cursor: pointer;
-            transition: all 500ms ease;
-        }
-    }
-}
-
-
-footer{
-    background-color: $secondarycolor;
+  &__link {
+    text-decoration: none;
+    font-size: 1.2rem;
     color: $whitecolor;
-    padding-top: 50px;
+    transition: all 500ms ease;
 
-    hr{
-        width: 55%;
-        margin-top: 20px;
+    &:hover {
+      color: $graycolor;
+      transition: all 500ms ease;
     }
+  }
+  input {
+    width: 48%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
 
-    p{
-        text-align: center;
-        font-size: 1.2rem;
-        margin-bottom: 0;
-        padding-bottom: 60px;
-        margin-top: 0;
+  .eml-rt {
+    float: right;
+  }
+
+  textarea {
+    width: 100%;
+    height: 60px;
+    padding-left: 10px;
+    font-family: "Poppins", sans-serif;
+  }
+
+  button {
+    float: right;
+    width: 110px;
+    height: 40px;
+    border-radius: 0;
+    background-color: $blackcolor;
+    color: $whitecolor;
+    font-size: 1rem;
+    transition: all 500ms ease;
+
+    &:hover {
+      background-color: $lightblue;
+      cursor: pointer;
+      transition: all 500ms ease;
     }
+  }
 }
 
+footer {
+  background-color: $secondarycolor;
+  color: $whitecolor;
+  padding-top: 50px;
 
+  hr {
+    width: 55%;
+    margin-top: 20px;
+  }
+
+  p {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 0;
+    padding-bottom: 60px;
+    margin-top: 0;
+  }
+}
 
 // Media Queries Starts
 
-@media (max-width:1200px){
-    .header-navbar{
-        max-width: 1000px;
+@media (max-width: 1200px) {
+  .header-navbar {
+    max-width: 1000px;
+  }
+
+  .banner-inner {
+    &__heading {
+      font-size: 5.8rem;
+      padding-top: 2.4rem;
+    }
+  }
+
+  .banner-info {
+    max-width: 1000px;
+  }
+
+  .travel-agency {
+    max-width: 900px;
+
+    &__heading {
+      font-size: 2.3rem;
+
+      &::before,
+      &::after {
+        top: 23px;
+      }
+
+      &::before {
+        left: 40px;
+      }
+    }
+  }
+
+  .travel-box {
+    img {
+      display: none;
     }
 
-    .banner-inner{
+    &__para {
+      padding-right: 0;
+    }
+  }
 
-        &__heading{
-            font-size: 5.8rem;
-            padding-top: 2.4rem;
-        }
+  .travel-offers {
+    max-width: 900px;
+
+    &__heading {
+      font-size: 2.3rem;
+
+      &::before,
+      &::after {
+        top: 23px;
+      }
+
+      &::before {
+        left: 10px;
+      }
     }
 
-    .banner-info{
-        max-width: 1000px;
+    .offers-box {
+      flex-wrap: wrap;
     }
 
-    .travel-agency{
-        max-width: 900px;
+    .offers {
+      width: 46%;
+      margin-bottom: 50px;
 
-        &__heading{
-            font-size: 2.3rem;
+      &__heading {
+        font-size: 1.4rem;
+      }
 
-            &::before, &::after{
-                top: 23px;
-            }
+      &__para {
+        font-size: 1rem;
+      }
 
-            &::before{
-                left: 40px;
-                
-            }
+      button {
+        font-size: 0.8rem;
+      }
+    }
+  }
 
-        }
+  .weekend-section {
+    max-width: 900px;
+
+    &__heading {
+      font-size: 2.3rem;
+
+      &::before,
+      &::after {
+        top: 23px;
+      }
+
+      &::before {
+        left: 0;
+      }
+    }
+  }
+
+  .carousel-header {
+    max-width: 900px;
+
+    &__heading {
+      font-size: 2.3rem;
+
+      &::before,
+      &::after {
+        top: 23px;
+      }
+
+      &::before {
+        left: 220px;
+      }
     }
 
-    .travel-box{
-        img{
-            display: none;
-        }
-
-        &__para{
-            padding-right: 0;
-        }
+    .carousel-size {
+      max-width: 900px;
+      margin: 0 auto;
     }
 
-    .travel-offers{
-        max-width: 900px;
+    .caption {
+      h4 {
+        font-size: 1.2rem;
+      }
 
-        &__heading{
-            font-size: 2.3rem;
+      p {
+        font-size: 0.9rem;
+      }
+    }
+  }
 
-            &::before, &::after{
-                top: 23px;
-            }
+  section {
+    h1 {
+      font-size: 2.3rem;
 
-            &::before{
-                left: 10px;
-            }
-        }
+      &::before,
+      &::after {
+        top: 23px;
+      }
+    }
+  }
 
-        .offers-box{
-            flex-wrap: wrap;
-        }
+  .tour-section {
+    max-width: 900px;
 
-        .offers{
-            width: 46%;
-            margin-bottom: 50px;
-
-            &__heading{
-                font-size: 1.4rem;
-            }
-
-            &__para{
-                font-size: 1rem;
-            }
-
-            button{
-                font-size: 0.8rem;
-            }
-        }
+    &__heading {
+      font-size: 2.3rem;
     }
 
-    .weekend-section{
+    &__para {
+      font-size: 1rem;
+    }
+  }
 
-        max-width: 900px;
+  .blog-post {
+    max-width: 900px;
+  }
 
-        &__heading{
-            font-size: 2.3rem;
+  .footer-icons {
+    max-width: 900px;
+  }
 
-            &::before, &::after{
-                top: 23px;
-            }
+  .footer-info {
+    max-width: 900px;
 
-            &::before{
-                left: 0;
-            }
-        }
+    &__heading {
+      font-size: 1.6rem;
     }
 
-    .carousel-header{
-        max-width: 900px;
-
-        &__heading{
-
-            font-size: 2.3rem;
-
-            &::before, &::after{
-                top: 23px;
-            }
-
-            &::before{
-                left: 220px;
-            }
-
-        }
-
-        .carousel-size{
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .caption{
-
-            h4{
-                font-size: 1.2rem;
-            }
-
-            p{
-                font-size: 0.9rem;
-            }
-        }
+    &__para {
+      font-size: 1rem;
     }
 
-    section{
-
-        h1{
-            font-size: 2.3rem;
-
-            &::before, &::after{
-                top: 23px;
-            }
-        }
-    }
-    
-    .tour-section{
-        max-width: 900px;
-
-        &__heading{
-            font-size: 2.3rem;
-        }
-
-        &__para{
-            font-size: 1rem;
-        }
+    &__link {
+      font-size: 1rem;
     }
 
-    .blog-post{
-        max-width: 900px;
+    button {
+      width: 100px;
+      height: 40px;
     }
+  }
 
-    .footer-icons{
-        max-width: 900px;
+  footer {
+    p {
+      font-size: 0.9rem;
     }
-
-    .footer-info{
-        max-width: 900px;
-
-        &__heading{
-            font-size: 1.6rem;
-        }
-
-        &__para{
-            font-size: 1rem;
-        }
-
-        &__link{
-            font-size: 1rem;
-        }
-
-        button{
-            width: 100px;
-            height: 40px;
-        }
-    }
-
-    footer{
-
-        p{
-            font-size: 0.9rem;
-        }
-    }
+  }
 }
 
-@media (max-width:1100px){
-    .header{
-        .fix-bar{
-            display: none;
-        }
+@media (max-width: 1100px) {
+  .header {
+    .fix-bar {
+      display: none;
     }
+  }
 
-    .header-navbar{
-        .topnav-bar{
+  .header-navbar {
+    .topnav-bar {
+      &__logo {
+        margin: 0;
+        padding-top: 30px;
+        margin-left: 50px;
+      }
 
-            &__logo{
-                margin: 0;
-                padding-top: 30px;
-                margin-left: 50px;
-            }
+      &__list {
+        padding-right: 3rem;
+        margin-top: 0;
+        padding-bottom: 2px;
+      }
 
-            &__list{
-                padding-right: 3rem;
-                margin-top: 0;
-                padding-bottom: 2px;
-            }
-
-            &__item{
-                padding-right: 3.8rem;
-            }
-        }
+      &__item {
+        padding-right: 3.8rem;
+      }
     }
+  }
 }
 
+@media (max-width: 1000px) {
+  .banner-info {
+    max-width: 800px;
 
-@media (max-width:1000px){
-    .banner-info{
-        max-width: 800px;
-
-        &__section{
-
-            margin: 0;
-
-        }
-
-        &__first, &__second, &__third, &__button{
-            width: 200px;
-            margin-right: 10px;
-            margin-left: 10px;
-        }
+    &__section {
+      margin: 0;
     }
+
+    &__first,
+    &__second,
+    &__third,
+    &__button {
+      width: 200px;
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+  }
 }
 
-@media (max-width:950px){
-    .header-navbar{
-        .topnav-bar{
-            display: flex;
-            justify-content: space-between;
+@media (max-width: 950px) {
+  .header-navbar {
+    .topnav-bar {
+      display: flex;
+      justify-content: space-between;
 
-            &__logo{
-                margin: 0;
-                padding: 20px 0px;
-                margin-left: 50px;
-            }
+      &__logo {
+        margin: 0;
+        padding: 20px 0px;
+        margin-left: 50px;
+      }
 
-            &__list{
-                margin-top: 45px;
-            }
+      &__list {
+        margin-top: 45px;
+      }
 
-            &__item{
-                padding-right: 2rem;
-            }
-        }
+      &__item {
+        padding-right: 2rem;
+      }
     }
+  }
 
-    .travel-agency{
-        max-width: 700px;
+  .travel-agency {
+    max-width: 700px;
 
-        &__heading{
-            font-size: 1.8rem;
-            word-spacing: 4px;
+    &__heading {
+      font-size: 1.8rem;
+      word-spacing: 4px;
 
-            &::before, &::after{
-                display: none;
-            }
-        }
-    }
-
-    .travel-box{
-
-        &__para{
-            font-size: 0.9rem;
-        }
-    }
-
-    .travel-offers{
-        max-width: 700px;
-        
-        &__heading{
-            font-size: 1.8rem;
-            word-spacing: 4px;
-
-            &::before, &::after{
-                display: none;
-            }
-        }
-
-        .offers{
-            width: 100%;
-
-            &__icon{
-                width: 30%;
-            }
-
-            button{
-                width: 145px;
-                font-size: 0.7rem;
-            }
-        }
-    }
-
-    .carousel-header{
-        max-width: 700px;
-
-        &__heading{
-
-            font-size: 1.8rem;
-            word-spacing: 4px;
-
-            &::before, &::after{
-                display: none;
-            }            
-        }
-
-        &__para{
-            font-size: 0.9rem;
-        }
-    }
-
-    .weekend-section{
-        max-width: 700px;
-        
-        &__heading{
-            font-size: 1.8rem;
-            word-spacing: 4px;
-
-            &::before, &::after{
-                display: none;
-            }
-        }
-    }
-
-    .tour-section{
-        max-width: 600px;
-
-        &__heading{
-            font-size: 1.8rem;
-            word-spacing: 4px;
-        }
-
-        &__para{
-            font-size: 0.9rem;
-            padding-left: 15px;
-            padding-right: 15px;
-        }
-    }
-
-    section{
-
-        h1{
-            font-size: 1.8rem;
-            word-spacing: 4px;
-
-            &::before, &::after{
-                display: none;
-            }
-        }
-
-        p{
-            font-size: 0.9rem;
-        }
-    }
-
-    .blog-post{
-        flex-wrap: wrap;
-        justify-content: center;
-        
-        .tour-blog{
-            width: 90%;
-            margin-bottom: 40px;
-
-            &__tag{
-                width: 90px;
-                font-size: 1rem;
-            }
-
-            &__coments{
-
-                h3{
-                    font-size: 1rem;
-                }
-
-                span{
-                    font-size: 0.9rem;
-                }
-            }
-
-            &__heading{
-
-                font-size: 1.3rem;
-            }
-
-            &__para{
-                font-size: 0.9rem;
-            }
-        }
-    }
-
-}
-
-@media (max-width:900px){
-
-    .banner-inner{
-
-        &__heading{
-            font-size: 4.5rem;
-        }
-    }
-
-    .carousel-header{
-
-        .owl-theme .owl-dots .owl-dot{
-            margin-right: 5px;
-    
-            span{
-    
-                width: 15px;
-                height: 15px;
-            }
-        }
-    }
-
-    .footer-icons{
-        max-width: 600px;
-    }
-
-    .footer-info{
-        max-width: 600px;
-        flex-wrap: wrap;
-
-        &__contacts, &__lnks{
-            width: 250px;
-        }
-
-        &__sbmit{
-            width: 600px;
-        }
-
-        &__heading{
-            font-size: 1.4rem;
-            padding-bottom: 10px;
-        }
-
-        &__para{
-            font-size: 0.9rem;
-            padding-bottom: 0;
-            line-height: 22px;
-        }
-
-        &__list{
-
-            margin-bottom: 0;
-        }
-
-        &__item{
-
-            line-height: 20px;
-        }
-
-        &__link{
-            font-size: 0.9rem;
-        }
-    }
-
-    footer{
-        hr{
-            display: none;
-        }
-
-        p{
-            margin-top: 20px;
-        }
-    }
-
-}
-
-
-@media (max-width:850px){
-
-    .banner-inner{
-
-        button{
-            margin-bottom: 3rem;
-        }
-    }
-    .banner-info{
+      &::before,
+      &::after {
         display: none;
+      }
     }
+  }
+
+  .travel-box {
+    &__para {
+      font-size: 0.9rem;
+    }
+  }
+
+  .travel-offers {
+    max-width: 700px;
+
+    &__heading {
+      font-size: 1.8rem;
+      word-spacing: 4px;
+
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+
+    .offers {
+      width: 100%;
+
+      &__icon {
+        width: 30%;
+      }
+
+      button {
+        width: 145px;
+        font-size: 0.7rem;
+      }
+    }
+  }
+
+  .carousel-header {
+    max-width: 700px;
+
+    &__heading {
+      font-size: 1.8rem;
+      word-spacing: 4px;
+
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+
+    &__para {
+      font-size: 0.9rem;
+    }
+  }
+
+  .weekend-section {
+    max-width: 700px;
+
+    &__heading {
+      font-size: 1.8rem;
+      word-spacing: 4px;
+
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  .tour-section {
+    max-width: 600px;
+
+    &__heading {
+      font-size: 1.8rem;
+      word-spacing: 4px;
+    }
+
+    &__para {
+      font-size: 0.9rem;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+
+  section {
+    h1 {
+      font-size: 1.8rem;
+      word-spacing: 4px;
+
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+
+    p {
+      font-size: 0.9rem;
+    }
+  }
+
+  .blog-post {
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .tour-blog {
+      width: 90%;
+      margin-bottom: 40px;
+
+      &__tag {
+        width: 90px;
+        font-size: 1rem;
+      }
+
+      &__coments {
+        h3 {
+          font-size: 1rem;
+        }
+
+        span {
+          font-size: 0.9rem;
+        }
+      }
+
+      &__heading {
+        font-size: 1.3rem;
+      }
+
+      &__para {
+        font-size: 0.9rem;
+      }
+    }
+  }
 }
 
-@media (max-width:767px){
-
-    .header-navbar{
-        .topnav-bar{
-            position: relative;
-            flex-direction: column;
-
-            &__logo{
-                margin: 0;
-                text-align: center;
-            }
-
-            &__list{
-                width: 95%;
-                margin: 0 auto;
-                position: absolute;
-                top: 150px;
-                background-color: $whitecolor;
-                display: flex;
-                flex-direction: column;
-                z-index: 9999;
-                padding: 20px;
-                padding-bottom: 40px;
-                display: none;
-                transform: translate(2.6%);
-            }
-
-            &__item{
-                text-align: left;
-                padding-top: 10px;
-                padding-bottom: 10px;
-                border-bottom: 1px solid $bordercolor;
-
-            }
-
-            &__link{
-                color: $blackcolor;
-                font-size: 0.9rem;
-
-                &:hover{
-                    color: $lightblue;
-                }
-            }
-
-            .dropdown-btn{
-                width: 95%;
-                margin: 0 auto;
-                background-color: #000;
-            }
-
-            button{
-                display: block;
-                margin: 0;
-                float: right;
-            }
-        }
+@media (max-width: 900px) {
+  .banner-inner {
+    &__heading {
+      font-size: 4.5rem;
     }
-    
-    
-    .banner-inner{
+  }
 
-        &__heading{
-            font-size: 4rem;
-        }
+  .carousel-header {
+    .owl-theme .owl-dots .owl-dot {
+      margin-right: 5px;
+
+      span {
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+
+  .footer-icons {
+    max-width: 600px;
+  }
+
+  .footer-info {
+    max-width: 600px;
+    flex-wrap: wrap;
+
+    &__contacts,
+    &__lnks {
+      width: 250px;
     }
 
-    .travel-offers{
-
-        &__para{
-            font-size: 0.9rem;
-        }
-
-        .offers{
-            margin: 15px;
-
-            &__para{
-                font-size: 0.9rem;
-            }
-        }
+    &__sbmit {
+      width: 600px;
     }
 
-    .weekend-section{
-
-        &__para{
-            font-size: 0.9rem;
-        }
+    &__heading {
+      font-size: 1.4rem;
+      padding-bottom: 10px;
     }
 
-    .carousel-header{
-        margin: 15px;
+    &__para {
+      font-size: 0.9rem;
+      padding-bottom: 0;
+      line-height: 22px;
     }
+
+    &__list {
+      margin-bottom: 0;
+    }
+
+    &__item {
+      line-height: 20px;
+    }
+
+    &__link {
+      font-size: 0.9rem;
+    }
+  }
+
+  footer {
+    hr {
+      display: none;
+    }
+
+    p {
+      margin-top: 20px;
+    }
+  }
 }
 
-@media (max-width:600px){
-
-    .blog-post{
-
-        .tour-blog{
-
-            &__coments{
-
-                h3{
-                    font-size: 0.8rem;
-                }
-
-                span{
-                    font-size: 0.8rem;
-                }
-            }
-
-            &__heading{
-
-                font-size: 1.2rem;
-            }
-
-            &__para{
-                font-size: 0.8rem;
-            }
-        }
+@media (max-width: 850px) {
+  .banner-inner {
+    button {
+      margin-bottom: 3rem;
     }
-
-    .footer-icons{
-        max-width: 500px;
-    }
-
-    .footer-info{
-
-        max-width: 500px;
-    }
+  }
+  .banner-info {
+    display: none;
+  }
 }
 
-@media (max-width:500px){
+@media (max-width: 767px) {
+  .header-navbar {
+    .topnav-bar {
+      position: relative;
+      flex-direction: column;
 
-    .footer-icons{
-        margin-left: 15px;
+      &__logo {
+        margin: 0;
+        text-align: center;
+      }
+
+      &__list {
+        width: 95%;
+        margin: 0 auto;
+        position: absolute;
+        top: 150px;
+        background-color: $whitecolor;
+        display: flex;
+        flex-direction: column;
+        z-index: 9999;
+        padding: 20px;
+        padding-bottom: 40px;
+        display: none;
+        transform: translate(2.6%);
+      }
+
+      &__item {
+        text-align: left;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid $bordercolor;
+      }
+
+      &__link {
+        color: $blackcolor;
+        font-size: 0.9rem;
+
+        &:hover {
+          color: $lightblue;
+        }
+      }
+
+      .dropdown-btn {
+        width: 95%;
+        margin: 0 auto;
+        background-color: #000;
+      }
+
+      button {
+        display: block;
+        margin: 0;
+        float: right;
+      }
+    }
+  }
+
+  .banner-inner {
+    &__heading {
+      font-size: 4rem;
+    }
+  }
+
+  .travel-offers {
+    &__para {
+      font-size: 0.9rem;
     }
 
-    .footer-info{
+    .offers {
+      margin: 15px;
 
-        &__contacts, &__lnks{
-            width: 100%;
-            margin-left: 15px;
-        }
-
-        &__sbmit{
-            width: 400px;
-            margin-left: 15px;
-            position: relative;
-
-            input{
-                width: 90%;
-                display: block;
-            }
-
-            .eml-rt{
-                float: left;
-            }
-
-            
-            textarea{
-                width: 90%;
-            }
-
-            button{
-                position: absolute;
-                left: 50%;
-                transform: translate(-50%);
-            }
-
-        }
-
+      &__para {
+        font-size: 0.9rem;
+      }
     }
+  }
 
-    footer{
-
-        p{
-            margin-top: 60px;
-        }
+  .weekend-section {
+    &__para {
+      font-size: 0.9rem;
     }
+  }
+
+  .carousel-header {
+    margin: 15px;
+  }
 }
 
-@media (max-width:380px){
-
-    .banner-inner{
-
-        &__heading{
-
-            font-size: 3.5rem;
+@media (max-width: 600px) {
+  .blog-post {
+    .tour-blog {
+      &__coments {
+        h3 {
+          font-size: 0.8rem;
         }
+
+        span {
+          font-size: 0.8rem;
+        }
+      }
+
+      &__heading {
+        font-size: 1.2rem;
+      }
+
+      &__para {
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  .footer-icons {
+    max-width: 500px;
+  }
+
+  .footer-info {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 500px) {
+  .footer-icons {
+    margin-left: 15px;
+  }
+
+  .footer-info {
+    &__contacts,
+    &__lnks {
+      width: 100%;
+      margin-left: 15px;
     }
 
-    .tour-section{
-        padding-bottom: 70px;
+    &__sbmit {
+      width: 400px;
+      margin-left: 15px;
+      position: relative;
 
-        &__buttons{
-            width: 50%;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
+      input {
+        width: 90%;
+        display: block;
+      }
 
-            button{
-                margin: 0;
-                margin-bottom: 10px;
-            }
-        }
+      .eml-rt {
+        float: left;
+      }
+
+      textarea {
+        width: 90%;
+      }
+
+      button {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+      }
     }
+  }
+
+  footer {
+    p {
+      margin-top: 60px;
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .banner-inner {
+    &__heading {
+      font-size: 3.5rem;
+    }
+  }
+
+  .tour-section {
+    padding-bottom: 70px;
+
+    &__buttons {
+      width: 50%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+
+      button {
+        margin: 0;
+        margin-bottom: 10px;
+      }
+    }
+  }
 }
